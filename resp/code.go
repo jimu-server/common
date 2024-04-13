@@ -7,4 +7,10 @@ const (
 	WebErr     = 1000 // 系统错误
 	WebArgsErr = 1001 // 参数解析错误
 	TokenErr   = 1002 // 身份验证失败
+
+	CheckPasswordErr = 1003 // 密码错误
+
+	EmailVerifyErr = 1004 // 邮箱验证失败业务代码
+
+	PhoneCodeTimeError = 1005 // 手机验证码过期
 )
