@@ -59,9 +59,13 @@ func Success(data any, option ...Option) Response {
 // err 代码错误信息
 // option 配置项
 func Error(err error, option ...Option) Response {
+	msg := ""
+	if err != nil {
+		msg = err.Error()
+	}
 	r := Response{
 		Code: Err,
-		Msg:  err.Error(),
+		Msg:  msg,
 	}
 	for _, o := range option {
 		o(&r)
